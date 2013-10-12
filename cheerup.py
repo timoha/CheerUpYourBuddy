@@ -1,12 +1,10 @@
 from bottle import route, run, template
 import urllib.parse
 import urllib.request
-import subprocess
 import json
 from string import ascii_letters
 
 from data import word_sentiments
-from ucb import main, trace, interact, log_current_line
 
 app_id = "221563731244990"
 app_secret = "544e64364be4a1e1a5d6ffa695d9425a"
@@ -146,7 +144,6 @@ def get_friend_by_id(uid, friends):
         if get_friend_id(friend) == uid:
             return friend
 
-# app = Flask(__name__)
 
 
 @route('/')
